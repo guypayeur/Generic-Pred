@@ -1,15 +1,22 @@
 INSTALLATION INSTRUCTION
 
+.this is a Windows10 installation procedure
+
 STEPS LIST
 .clone Generic-Pred from github to a local directory : https://github.com/guypayeur/Generic-Pred.git
 	.one could use GitHub Desktop : https://desktop.github.com/
-.install as administrator python 3.7.0 "https://www.python.org/" "C:\Users\guypa\OneDrive\Downloads\python-3.7.0-amd64.exe"
-	custom install select c:\Program Files\Python37
-.install as administrator julia 0.6.4 "https://julialang.org/downloads" "C:\Users\guypa\OneDrive\Downloads\julia-1.0.0-win64.exe"
-	as of 2018-09-25 julia 1.0.0 is not compatible with the Gadfly package yet
-.add julia directory to PATH
+.install as administrator python 3.2.0 : "https://www.python.org/"
+	.custom install select c:\Program Files\Python37
+	.as of 2018-09-25 python 3.7 is not compatible with llvmpy needed for julia Cxx package 
+.install as administrator julia 0.6.4 "https://julialang.org/downloads"
+	.as of 2018-09-25 julia 1.0.0 is not compatible with the Gadfly package yet
+.add ...julia\bin directory to PATH
 .open CMD
 	>julia
+	.if julia wont start, check your PATH
+		>^PATH
+		.you should see ...julia\bin
+		.mine is C:\Program Files\Julia-0.6.4\bin
 .initiate Pkg setting
 	julia>Pkg.status()
 .install packages
@@ -21,8 +28,8 @@ STEPS LIST
 	>python -m pip install --upgrade pip
 	>python -m pip install jupyter
 .LAUNCHING JUPYTER
-	.goto Generic-Pred directory
-	>cd c:\Users\guypa\Documents\GitHub\Generic-Pred
+	.goto local clone of Generic-Pred directory
+	.mine is : >cd c:\Users\guypa\Documents\GitHub\Generic-Pred
 	>jupyter notebook
 
 
