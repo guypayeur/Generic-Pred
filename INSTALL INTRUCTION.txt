@@ -1,0 +1,49 @@
+INSTALLATION INSTRUCTION
+
+STEPS LIST
+.clone Generic-Pred from github to a local directory : https://github.com/guypayeur/Generic-Pred.git
+	.one could use GitHub Desktop : https://desktop.github.com/
+.install as administrator python 3.7.0 "https://www.python.org/" "C:\Users\guypa\OneDrive\Downloads\python-3.7.0-amd64.exe"
+	custom install select c:\Program Files\Python37
+.install as administrator julia 0.6.4 "https://julialang.org/downloads" "C:\Users\guypa\OneDrive\Downloads\julia-1.0.0-win64.exe"
+	as of 2018-09-25 julia 1.0.0 is not compatible with the Gadfly package yet
+.add julia directory to PATH
+.open CMD
+	>julia
+.initiate Pkg setting
+	julia>Pkg.status()
+.install packages
+	julia>Pkg.add("IJulia")
+	julia>Pkg.add("Gadfly")
+	julia>Pkg.add("DataFrames")
+	julia>Pkg.add("CSV")
+.install as administrator jupyter from CMD
+	>python -m pip install --upgrade pip
+	>python -m pip install jupyter
+.LAUNCHING JUPYTER
+	.goto Generic-Pred directory
+	>cd c:\Users\guypa\Documents\GitHub\Generic-Pred
+	>jupyter notebook
+
+
+UTILITY PYTHON COMMANDS
+
+.list all packages installed : >>>help("modules")
+.list all packages installed : >pip freeze
+.list all packages installed : >pip list
+.Verify installed packages have compatible dependencies : >pip check
+
+
+UTILITY JULIA COMMANDS
+
+.add packages
+	julia>using Pkg
+	julia>Pkg.add("XYZ")
+.list packages
+	julia>Pkg.status()
+	julia>Pkg.installed()
+.update all packages
+	julia>Pkg.update()
+.build all packages
+	julia>Pkg.build()
+
