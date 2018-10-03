@@ -1,20 +1,22 @@
-GPU INSTALLATION INSTRUCTION
+JULIA LOCAL INSTALLATION INSTRUCTION
 
 .this is a Windows10 installation procedure
 
-STEPS LIST
+.Julia prerequisite
+	.Windows Management Framework (included with Windows 10)
+.Jupyter
+	.Python
+
+.STEPS LIST
 .clone Generic-Pred from github to a local directory : https://github.com/guypayeur/Generic-Pred.git
 	.one could use GitHub Desktop : https://desktop.github.com/
-.install as administrator python 2.7.X : "https://www.python.org/"
+.install as administrator python 3.7.X : "https://www.python.org/"
 	.custom install select c:\Program Files\Python37
-	.as of 2018-09-25 python 3.7 is not compatible with llvmpy needed for julia GPU computing 
-	.installed python 2.7.15
-	.download latest pip package : https://bootstrap.pypa.io/get-pip.py
-	.goto the get-pip.py directory
-		.mine was : C:\Users\guypa\OneDrive\Downloads
-		.run CMD as administrator
-			>python get-pip.py
-	.
+	.installed python 3.7.1
+	.run CMD as administrator
+			>python -m pip install --upgrade pip
+.install as administrator jupyter from CMD
+	>python -m pip install jupyter
 .install as administrator julia 0.6.4 "https://julialang.org/downloads"
 	.as of 2018-09-25 julia 1.0.0 is not compatible with the Gadfly package yet
 .add ...julia\bin directory to PATH : systems settings
@@ -27,21 +29,18 @@ STEPS LIST
 .initiate Pkg setting
 	julia>Pkg.status()
 .install packages
+	julia>ENV["JUPYTER"]="jupyter"
 	julia>Pkg.add("IJulia")
 	julia>Pkg.add("Gadfly")
-	julia>Pkg.add("DataFrames")
 	julia>Pkg.add("CSV")
-	julia>Pkg.add("Cxx")
-.install as administrator jupyter from CMD
-	>python -m pip install --upgrade pip
-	>python -m pip install jupyter
+
 .LAUNCHING JUPYTER
 	.goto local clone of Generic-Pred directory
 	.mine is : >cd c:\Users\guypa\Documents\GitHub\Generic-Pred
 	>jupyter notebook
 
 
-UTILITY PYTHON COMMANDS
+.UTILITY PYTHON COMMANDS
 
 .list all packages installed : >>>help("modules")
 .list all packages installed : >pip freeze
@@ -50,7 +49,7 @@ UTILITY PYTHON COMMANDS
 .upgarde a package : pip install --upgrade XYZ
 
 
-UTILITY JULIA COMMANDS
+.UTILITY JULIA COMMANDS
 
 .add packages
 	julia>using Pkg
