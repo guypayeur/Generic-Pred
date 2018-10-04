@@ -22,7 +22,7 @@ JULIA LOCAL INSTALLATION INSTRUCTION
 .add ...julia\bin directory to PATH : systems settings
 .open CMD
 	>julia
-	.if julia wont start, check your PATH
+	.if julia wont start, check your PATH with "windows system settings"
 		>PATH
 		.you should see ...julia\bin
 		.mine is C:\Program Files\Julia-0.6.4\bin
@@ -61,6 +61,4 @@ JULIA LOCAL INSTALLATION INSTRUCTION
 	julia>Pkg.update()
 .build all packages
 	julia>Pkg.build()
-
-GPU COMPUTING IN JULIA
 
