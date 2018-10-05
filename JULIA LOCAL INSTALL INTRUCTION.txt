@@ -11,9 +11,13 @@ JULIA LOCAL INSTALLATION INSTRUCTION
 .clone Generic-Pred from github to a local directory : https://github.com/guypayeur/Generic-Pred.git
 	.one could use GitHub Desktop : https://desktop.github.com/
 .install as administrator python 3.7.X : "https://www.python.org/"
-	.custom install select c:\Program Files\Python37
-	.installed python 3.7.1
-	.run CMD as administrator
+	.custom install : select "program location c:\Program Files\Python37"
+		.more intuitive to find it afterword
+	.custom install : select "add python to your PATH"
+		.later jupyter installation will use this instead of the one included in jupyter package (sub_package : conda)
+	.my installation is python 3.7.1
+	.update pip (python package management)
+		.run CMD as administrator
 			>python -m pip install --upgrade pip
 .install as administrator jupyter from CMD
 	>python -m pip install jupyter
